@@ -18,5 +18,6 @@ start = time.time()
 for i, img in enumerate(images):
     word_list += pytesseract.image_to_string(img, lang='eng')
 
+print(word_list)
 print(len(word_list.replace("\n", " ").split()))
 print(time.time() - start)
